@@ -28,6 +28,95 @@ else:
     from .sources import INITIAL_SOURCES
 
 
+def load_seed(repo_root: Path, relative_path: str) -> dict[str, object]:
+    seed_path = repo_root / relative_path
+    return json.loads(seed_path.read_text(encoding="utf-8"))
+
+
+def build_fintech_contract(repo_root: Path) -> dict[str, object]:
+    fed_seed = load_seed(repo_root, "data/fintech/seed-fed-press-releases.json")
+    plaid_seed = load_seed(repo_root, "data/fintech/seed-plaid-status.json")
+
+    fed_items = fed_seed.get("items", [])
+    plaid_status = plaid_seed.get("status", {})
+    plaid_incidents = plaid_seed.get("recent_incidents", [])
+
+    return {
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "wedge": "fintech",
+        "summary": {
+            "title": "Cross-border payments operations pulse",
+            "takeaway": (
+                "Compliance-change density and corridor-specific platform brittleness "
+                "are more useful than generic fintech headlines for anticipating ops pain."
+            ),
+        },
+        "sources": [
+            {
+                "id": "fed-press",
+                "name": "Federal Reserve press releases",
+                "source_url": fed_seed["source"],
+                "reliability": "high",
+            },
+            {
+                "id": "plaid-status",
+                "name": "Plaid status",
+                "source_url": plaid_seed["source"],
+                "reliability": "medium-high",
+            },
+        ],
+        "signals": [
+            {
+                "id": "policy-density",
+                "label": "Regulatory and policy change density",
+                "latest_value": "Elevated",
+                "direction": "up",
+                "confidence": "high",
+                "evidence": [item["title"] for item in fed_items[:3]],
+            },
+            {
+                "id": "platform-brittleness",
+                "label": "Public platform brittleness signal",
+                "latest_value": plaid_status.get("description", "Unknown"),
+                "direction": "mixed",
+                "confidence": "medium",
+                "evidence": [incident["title"] for incident in plaid_incidents[:3]],
+            },
+            {
+                "id": "queue-collision",
+                "label": "Compliance and exception queue collision risk",
+                "latest_value": "Rising",
+                "direction": "up",
+                "confidence": "medium",
+                "evidence": [
+                    "Public policy cadence remains elevated",
+                    "Recent platform incidents can spill into support and reconciliation",
+                ],
+            },
+        ],
+        "updates": [
+            {
+                "slug": "fintech-update-01",
+                "title": "Compliance change is landing faster than workflow adaptation",
+                "publishedAt": "2026-04-03",
+                "summary": "Policy and enforcement signals suggest manual review load will rise before visible outages.",
+            },
+            {
+                "slug": "fintech-update-02",
+                "title": "Payout reliability is fragmenting by partner and corridor",
+                "publishedAt": "2026-04-03",
+                "summary": "Recent status history reinforces that incident risk is often partner-specific rather than platform-wide.",
+            },
+            {
+                "slug": "fintech-update-03",
+                "title": "Fraud and compliance are converging into the same bottleneck",
+                "publishedAt": "2026-04-03",
+                "summary": "Operational burden is increasingly driven by queue design and escalation logic, not raw event count.",
+            },
+        ],
+    }
+
+
 def build_snapshot() -> dict[str, object]:
     observed_at = datetime.now(timezone.utc).isoformat()
     snapshots = [
@@ -65,6 +154,7 @@ def main() -> None:
 
     fintech_dir = output_dir / "fintech"
     fintech_dir.mkdir(parents=True, exist_ok=True)
+    stable_fintech_path = repo_root / "data" / "fintech" / "signals.latest.json"
 
     try:
         fed_result = fetch_rss_feed(FED_ALL_PRESS_RELEASES_RSS)
@@ -81,6 +171,11 @@ def main() -> None:
         print(f"Wrote {plaid_path}")
     except Exception as exc:
         print(f"Skipped Plaid status fetch: {exc}")
+
+    stable_fintech_path.write_text(
+        json.dumps(build_fintech_contract(repo_root), indent=2), encoding="utf-8"
+    )
+    print(f"Wrote {stable_fintech_path}")
 
 
 if __name__ == "__main__":

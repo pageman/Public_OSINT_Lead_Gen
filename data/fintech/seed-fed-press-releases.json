@@ -1,0 +1,30 @@
+{
+  "fetched_at": "2026-04-03T00:00:00Z",
+  "source": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+  "items": [
+    {
+      "date": "2026-03-18",
+      "title": "Federal Reserve issues FOMC statement",
+      "category": "Monetary Policy",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a.htm"
+    },
+    {
+      "date": "2026-03-18",
+      "title": "Implementation Note issued March 18, 2026",
+      "category": "Monetary Policy",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260318a1.htm"
+    },
+    {
+      "date": "2026-03-13",
+      "title": "Federal Reserve Board issues enforcement actions with former employee of Equity Bank and former employee of First State Bank of Dongola",
+      "category": "Enforcement Actions",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm"
+    },
+    {
+      "date": "2026-03-05",
+      "title": "Agencies clarify the capital treatment of tokenized securities",
+      "category": "Banking and Consumer Regulatory Policy",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm"
+    }
+  ]
+}

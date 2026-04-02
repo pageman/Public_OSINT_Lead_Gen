@@ -2,6 +2,8 @@
 
 An implementation repo for an OSINT-led lead generation platform that starts with public signal, converts that signal into qualified inbound demand, and monetizes the execution workflows behind the signal.
 
+<img src="./Strategic%20OSINT%20Business%20Development%20Roadmap.png" alt="OSINT Lead Gen roadmap" width="900" />
+
 This repository is organized around a 120-day build plan. The first 30 days focus on a narrow wedge: one crisis, one buyer persona, one public intelligence hub, one repeatable publishing workflow, and one conversion path.
 
 ## Scope
@@ -42,6 +44,12 @@ The full phase plan lives in [docs/roadmap.md](/Users/hifi/Downloads/Public_OSIN
 - Internal workflows: `FastAPI`, `Zapier` or `Make`
 - Reporting: `Metabase`
 - Billing: `Stripe`
+
+## Deployment
+
+- Vercel deployment guide: [docs/deployment.md](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/deployment.md)
+- Contributor guide: [CONTRIBUTING.md](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/CONTRIBUTING.md)
+- CRM mapping: [docs/crm-mapping.md](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/crm-mapping.md)
 
 ## Repository Layout
 
@@ -101,6 +109,7 @@ The repo now includes a working day 0-30 foundation:
 - [services/ingestion/src/fetchers.py](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/services/ingestion/src/fetchers.py) includes the first real public-source fetcher
 - [apps/web/app/fintech/page.tsx](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/fintech/page.tsx) exposes the fintech alpha wedge in the app
 - [docs/fintech-alpha](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/fintech-alpha) contains the fintech day 0-30 content set
+- [data/fintech/signals.latest.json](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/data/fintech/signals.latest.json) is the stable persisted fintech signal contract consumed by the app
 
 ## Local Start
 
@@ -108,6 +117,7 @@ The repo now includes a working day 0-30 foundation:
 2. Run `npm run dev:web`
 3. Run `npm run ingest:run`
 4. Review the snapshot at `services/ingestion/data/latest_snapshot.json`
+5. Review the fintech contract at `data/fintech/signals.latest.json`
 
 ## Source Documents
 

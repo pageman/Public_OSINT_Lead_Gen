@@ -1,7 +1,9 @@
 import Link from "next/link";
-import { fintechMetrics, fintechUpdates } from "../data";
+import { readFintechData } from "../../lib/fintech-data";
 
 export default function FintechPage() {
+  const fintech = readFintechData();
+
   return (
     <>
       <section className="hero">
@@ -19,6 +21,14 @@ export default function FintechPage() {
             <Link className="button-secondary" href="/contact">
               Book operations briefing
             </Link>
+            <a
+              className="button-secondary"
+              href="https://github.com/pageman/Public_OSINT_Lead_Gen/tree/main/docs/fintech-alpha"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open fintech docs
+            </a>
           </div>
         </div>
         <div className="card">
@@ -39,13 +49,18 @@ export default function FintechPage() {
       <section className="section">
         <h2>Fintech Signal Snapshot</h2>
         <div className="metric-grid">
-          {fintechMetrics.map((metric) => (
+          {fintech.signals.map((metric) => (
             <article className="card" key={metric.id}>
               <div className="eyebrow">{metric.label}</div>
-              <p className="metric-value">{metric.latestValue}</p>
+              <p className="metric-value">{metric.latest_value}</p>
               <p className="muted">
                 Direction: <strong>{metric.direction}</strong> | Confidence: <strong>{metric.confidence}</strong>
               </p>
+              <ul className="list">
+                {metric.evidence.map((entry) => (
+                  <li key={entry}>{entry}</li>
+                ))}
+              </ul>
             </article>
           ))}
         </div>
@@ -54,11 +69,24 @@ export default function FintechPage() {
       <section className="section">
         <h2>First Three Updates</h2>
         <div className="update-grid">
-          {fintechUpdates.map((update) => (
+          {fintech.updates.map((update) => (
             <article className="card" key={update.slug}>
               <div className="eyebrow">{update.publishedAt}</div>
               <h3>{update.title}</h3>
               <p className="muted">{update.summary}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="section">
+        <h2>Trusted Public Sources</h2>
+        <div className="source-grid">
+          {fintech.sources.map((source) => (
+            <article className="card" key={source.id}>
+              <h3>{source.name}</h3>
+              <p className="muted">{source.source_url}</p>
+              <p>Reliability: {source.reliability}</p>
             </article>
           ))}
         </div>

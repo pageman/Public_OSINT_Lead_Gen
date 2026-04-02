@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-04-02T16:11:18.212727+00:00",
+  "wedge": "fintech",
+  "summary": {
+    "title": "Cross-border payments operations pulse",
+    "takeaway": "Compliance-change density and corridor-specific platform brittleness are more useful than generic fintech headlines for anticipating ops pain."
+  },
+  "sources": [
+    {
+      "id": "fed-press",
+      "name": "Federal Reserve press releases",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-press.htm",
+      "reliability": "high"
+    },
+    {
+      "id": "plaid-status",
+      "name": "Plaid status",
+      "source_url": "https://status.plaid.com/",
+      "reliability": "medium-high"
+    }
+  ],
+  "signals": [
+    {
+      "id": "policy-density",
+      "label": "Regulatory and policy change density",
+      "latest_value": "Elevated",
+      "direction": "up",
+      "confidence": "high",
+      "evidence": [
+        "Federal Reserve issues FOMC statement",
+        "Implementation Note issued March 18, 2026",
+        "Federal Reserve Board issues enforcement actions with former employee of Equity Bank and former employee of First State Bank of Dongola"
+      ]
+    },
+    {
+      "id": "platform-brittleness",
+      "label": "Public platform brittleness signal",
+      "latest_value": "All Systems Operational",
+      "direction": "mixed",
+      "confidence": "medium",
+      "evidence": [
+        "IDV Downtime",
+        "Service Disruption Impacting Fidelity and Fidelity NetBenefits connections",
+        "API downtime"
+      ]
+    },
+    {
+      "id": "queue-collision",
+      "label": "Compliance and exception queue collision risk",
+      "latest_value": "Rising",
+      "direction": "up",
+      "confidence": "medium",
+      "evidence": [
+        "Public policy cadence remains elevated",
+        "Recent platform incidents can spill into support and reconciliation"
+      ]
+    }
+  ],
+  "updates": [
+    {
+      "slug": "fintech-update-01",
+      "title": "Compliance change is landing faster than workflow adaptation",
+      "publishedAt": "2026-04-03",
+      "summary": "Policy and enforcement signals suggest manual review load will rise before visible outages."
+    },
+    {
+      "slug": "fintech-update-02",
+      "title": "Payout reliability is fragmenting by partner and corridor",
+      "publishedAt": "2026-04-03",
+      "summary": "Recent status history reinforces that incident risk is often partner-specific rather than platform-wide."
+    },
+    {
+      "slug": "fintech-update-03",
+      "title": "Fraud and compliance are converging into the same bottleneck",
+      "publishedAt": "2026-04-03",
+      "summary": "Operational burden is increasingly driven by queue design and escalation logic, not raw event count."
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import { gatedAssets, leadScoreRules } from "../data";
 
 export default function InsightsPage() {
+  const tallyUrl = process.env.NEXT_PUBLIC_TALLY_FORM_URL;
+
   return (
     <section className="section">
       <div className="card">
@@ -29,28 +31,56 @@ export default function InsightsPage() {
 
         <div className="card">
           <h2>Lead form prototype</h2>
-          <form className="form-shell">
+          {tallyUrl ? (
+            <>
+              <p className="muted">
+                External form is configured. Use the hosted flow for production intake and the internal flow below
+                as a local fallback.
+              </p>
+              <p>
+                <a className="button-secondary" href={tallyUrl} target="_blank" rel="noreferrer">
+                  Open Tally form
+                </a>
+              </p>
+            </>
+          ) : null}
+          <form className="form-shell" action="/api/lead-capture" method="post">
+            <input type="hidden" name="wedge" value="fintech" />
+            <input type="hidden" name="sourcePage" value="/insights" />
             <label>
               Work email
-              <input type="email" placeholder="ops@company.com" />
+              <input type="email" name="email" placeholder="ops@company.com" required />
             </label>
             <label>
               Company
-              <input type="text" placeholder="Company name" />
+              <input type="text" name="company" placeholder="Company name" required />
             </label>
             <label>
               Role
-              <select defaultValue="operator">
+              <select name="role" defaultValue="operator">
                 <option value="operator">Operator / forwarder</option>
                 <option value="insurer">Insurer / broker</option>
                 <option value="analyst">Analyst</option>
               </select>
             </label>
             <label>
-              Current pain
-              <textarea rows={4} placeholder="Routing volatility, claims, war-risk docs, or exception backlog" />
+              Urgency
+              <select name="urgency" defaultValue="this_month">
+                <option value="this_week">Need help this week</option>
+                <option value="this_month">Need help this month</option>
+                <option value="research">Researching now</option>
+              </select>
             </label>
-            <button className="button" type="button">
+            <label>
+              Current pain
+              <textarea
+                name="currentPain"
+                rows={4}
+                placeholder="Compliance backlog, reconciliation pressure, payout corridor issues, or exception handling"
+                required
+              />
+            </label>
+            <button className="button" type="submit">
               Unlock insights
             </button>
           </form>

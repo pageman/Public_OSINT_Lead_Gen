@@ -45,6 +45,7 @@ data/raw/
 data/processed/
 data/exports/
 services/ingestion/data/fintech/
+services/ingestion/data/latest_snapshot.json
 
 # Local large media kept out of Git history
 Give_away_OSINT_to_sell_execution.m4a
