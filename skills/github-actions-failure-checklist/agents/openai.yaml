@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Actions Failure Checklist"
+  short_description: "Audit workflows against common failure causes"
+  default_prompt: "Use $github-actions-failure-checklist to audit this repository for GitHub Actions failure risks."

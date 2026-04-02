@@ -1,0 +1,19 @@
+{
+  "name": "osint-lead-gen",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev:web": "npm --workspace apps/web run dev",
+    "build:web": "npm --workspace apps/web run build",
+    "lint:docs": "npx --yes markdownlint-cli2 \"README.md\" \"docs/**/*.md\" \"skills/**/*.md\"",
+    "audit:actions": "python3 skills/github-actions-failure-checklist/scripts/audit_github_actions.py .",
+    "ingest:run": "python3 services/ingestion/src/main.py"
+  }
+}

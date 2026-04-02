@@ -1,0 +1,36 @@
+name: Ingestion Smoke
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  ingestion-smoke:
+    name: Ingestion Smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run ingestion snapshot
+        run: |
+          python3 services/ingestion/src/main.py
+
+      - name: Verify snapshot artifact exists
+        run: |
+          test -f services/ingestion/data/latest_snapshot.json

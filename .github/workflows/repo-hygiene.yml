@@ -1,0 +1,50 @@
+name: Repo Hygiene
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repo-hygiene:
+    name: Repo Hygiene
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify required repository files
+        run: |
+          test -f README.md
+          test -f LICENSE
+          test -f .gitignore
+          test -f docs/architecture.md
+          test -f docs/roadmap.md
+
+      - name: Verify milestone issue docs
+        run: |
+          test -f docs/issues/day-0-30.md
+          test -f docs/issues/day-31-60.md
+          test -f docs/issues/day-61-90.md
+          test -f docs/issues/day-91-120.md
+
+      - name: Verify skill audit script syntax
+        run: |
+          python -m py_compile \
+            skills/github-actions-failure-checklist/scripts/audit_github_actions.py
+
+      - name: Run local GitHub Actions audit
+        run: |
+          python skills/github-actions-failure-checklist/scripts/audit_github_actions.py .

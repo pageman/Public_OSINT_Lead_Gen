@@ -1,0 +1,43 @@
+name: Docs Validation
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  docs-validation:
+    name: Docs Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Validate markdown file inventory
+        run: |
+          test -f README.md
+          test -f docs/architecture.md
+          test -f docs/roadmap.md
+          test -f docs/issues/day-0-30.md
+          test -f docs/issues/day-31-60.md
+          test -f docs/issues/day-61-90.md
+          test -f docs/issues/day-91-120.md
+
+      - name: Check markdown headings and spacing
+        run: |
+          npx --yes markdownlint-cli2 \
+            "README.md" \
+            "docs/**/*.md" \
+            "skills/**/*.md"

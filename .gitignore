@@ -1,0 +1,50 @@
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+.next/
+dist/
+build/
+coverage/
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+*.pyc
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# Generated artifacts
+tmp/
+.cache/
+services/ingestion/src/__pycache__/
+apps/web/.next/
+
+# Deployment
+.vercel/
+
+# OSINT data exports
+data/raw/
+data/processed/
+data/exports/
+services/ingestion/data/fintech/
+
+# Local large media kept out of Git history
+Give_away_OSINT_to_sell_execution.m4a
