@@ -113,6 +113,7 @@ The repo now includes a working day 0-30 foundation:
 - [pilot-intake](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/pilot-intake/page.tsx) is the minimum viable paid-pilot intake path
 - [ops/cases](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/ops/cases/page.tsx) is the minimum viable internal case queue
 - [refresh-fintech-signals.yml](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/.github/workflows/refresh-fintech-signals.yml) schedules weekly fintech contract refreshes
+- [docs/day-31-60](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/day-31-60/README.md), [docs/day-61-90](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/day-61-90/README.md), and [docs/day-91-120](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/day-91-120/README.md) flesh out the later phases with concrete operating artifacts
 
 ## Local Start
 
