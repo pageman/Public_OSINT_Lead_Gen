@@ -1,5 +1,7 @@
 # Landing Page Copy
 
+> Example / exemplar output. Treat this as sample copy structure, not permanent dated truth.
+
 Date: April 2, 2026
 
 ## Option 1

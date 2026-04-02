@@ -1,5 +1,7 @@
 # Fintech Alpha Update 01
 
+> Example / exemplar output. Refresh the signal contract and rewrite for the current date before publishing externally.
+
 ## Headline
 
 Compliance change is landing faster than workflow adaptation in cross-border payout operations.

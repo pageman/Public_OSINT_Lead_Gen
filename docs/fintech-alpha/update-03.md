@@ -1,5 +1,7 @@
 # Fintech Alpha Update 03
 
+> Example / exemplar output. Refresh the signal contract and rewrite for the current date before publishing externally.
+
 ## Headline
 
 Fraud and compliance pressure are beginning to converge into the same operational bottleneck.

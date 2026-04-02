@@ -1,5 +1,7 @@
 # Fintech Alpha Sales Script
 
+> Example / exemplar output. Adapt this from the current signal contract and current date before using in live outreach.
+
 Date: April 2, 2026
 
 ## Use Case

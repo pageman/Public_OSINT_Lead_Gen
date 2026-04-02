@@ -1,5 +1,7 @@
 # Cold Outbound Email
 
+> Example / exemplar output. Update the date, evidence, and strongest current signal before sending.
+
 Date: April 2, 2026
 
 ## Version 1

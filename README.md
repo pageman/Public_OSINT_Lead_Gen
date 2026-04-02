@@ -32,6 +32,35 @@ Read the full narrative and method here:
 - [Research Arc](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc.md)
 - [Research Arc Diagram](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc-diagram.md)
 
+## Important: Example Outputs vs Live Alpha
+
+Many of the fintech artifacts in this repo are intentionally included as **example / exemplar outputs**.
+
+That includes:
+
+- fintech updates in `docs/fintech-alpha/`
+- sales assets in `docs/fintech-alpha/`
+- investor and client one-pagers
+- the current persisted fintech signal contract in `data/fintech/signals.latest.json`
+
+These are useful because they show:
+
+- what a good output looks like
+- how the narrative should be structured
+- how public signal turns into qualification and execution
+
+They should **not** be treated as timeless truth.
+
+To generate up-to-date alpha for a new date or a new wedge:
+
+1. Refresh the signal contract with `npm run ingest:run`
+2. Review the current persisted JSON in `data/fintech/` or the relevant wedge data folder
+3. Rebuild the public narrative, nowcast, and sales outputs from the refreshed contract
+4. Keep the date explicit in every time-sensitive memo, briefing, or landing-page story
+5. If changing wedges, repeat the same method with a new source map, new contract, and new public signal route
+
+The repo’s durable value is the **method**, not any one dated alpha memo.
+
 ## Scope
 
 This repo is intended to hold:
@@ -148,6 +177,27 @@ The repo now includes a working day 0-30 foundation:
 3. Run `npm run ingest:run`
 4. Review the snapshot at `services/ingestion/data/latest_snapshot.json`
 5. Review the fintech contract at `data/fintech/signals.latest.json`
+
+## How To Produce New Alpha
+
+Use this sequence for any new date:
+
+1. Refresh source-derived contracts with `npm run ingest:run`
+2. Review the main public contract in `data/fintech/signals.latest.json`
+3. Check supporting qualification and ops contracts in `data/qualification/` and `data/ops/`
+4. Update or regenerate:
+   - public pulse
+   - gated insights
+   - pilot framing
+   - sales assets
+5. Stamp the output with the actual date you are using
+
+Use this sequence for a new wedge:
+
+1. Define a new wedge and source map
+2. Create a new stable data contract
+3. Render it in routes
+4. regenerate exemplar outputs using the same narrative and method arcs
 
 ## Source Documents
 

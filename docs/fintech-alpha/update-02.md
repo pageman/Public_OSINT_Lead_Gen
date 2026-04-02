@@ -1,5 +1,7 @@
 # Fintech Alpha Update 02
 
+> Example / exemplar output. Refresh the signal contract and rewrite for the current date before publishing externally.
+
 ## Headline
 
 Payout reliability is fragmenting by partner and corridor faster than most dashboard rollups show.

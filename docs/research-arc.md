@@ -336,6 +336,28 @@ This repo repeatedly prefers:
 
 ---
 
+## Using This Repo On New Dates
+
+### Narrative Box
+
+**Story Box: Dated alpha expires; the method should not**
+
+The repo intentionally contains dated fintech alpha outputs because examples are useful. But the durable value of the repo is not the April 2, 2026 narrative itself. The durable value is the repeatable method for generating the next valid narrative on a new date.
+
+### Method Box
+
+**Method Box: Regenerate, do not merely reuse**
+
+For any new date:
+
+1. refresh the underlying contracts
+2. inspect the current evidence
+3. regenerate public, gated, and sales outputs
+4. stamp the date clearly
+5. treat prior alpha as exemplar structure, not current truth
+
+---
+
 ## Final Synthesis
 
 ### Narrative Box

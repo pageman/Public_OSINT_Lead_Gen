@@ -1,5 +1,7 @@
 # Fintech Alpha Memo
 
+> Example / exemplar output. This memo is a dated sample showing how to translate the repo's signal contract into a usable fintech alpha narrative. Regenerate for the current date before using operationally.
+
 ## Checklist Name
 
 Fintech Alpha Day 0-30

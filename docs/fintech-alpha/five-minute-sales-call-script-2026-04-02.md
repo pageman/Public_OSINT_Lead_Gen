@@ -1,5 +1,7 @@
 # 5-Minute Sales Call Script
 
+> Example / exemplar output. Regenerate from the latest contract and current date before using on live calls.
+
 Date: April 2, 2026
 
 ## Minute 0-1: Opening
