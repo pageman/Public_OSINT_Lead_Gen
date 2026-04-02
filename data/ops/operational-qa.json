@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "checks": [
+    {
+      "name": "Signal contract freshness",
+      "status": "pass",
+      "note": "Persisted fintech contract refreshed"
+    },
+    {
+      "name": "Lead routing integrity",
+      "status": "pass",
+      "note": "Lead capture route and pilot intake route are live"
+    },
+    {
+      "name": "Case queue accuracy",
+      "status": "warn",
+      "note": "Current queue is still sample data and should be replaced by live pilot records"
+    }
+  ]
+}

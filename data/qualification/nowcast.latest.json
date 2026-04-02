@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "horizon": "7 days",
+  "items": [
+    {
+      "id": "nowcast-001",
+      "signal": "Compliance review load",
+      "outlook": "rising",
+      "confidence": "medium-high",
+      "evidence": [
+        "Policy-change density remains elevated",
+        "Recent enforcement and implementation notes remain operationally relevant"
+      ],
+      "operator_action": "Measure queue aging and identify the top two manual handoff points."
+    },
+    {
+      "id": "nowcast-002",
+      "signal": "Partner-specific payout friction",
+      "outlook": "mixed",
+      "confidence": "medium",
+      "evidence": [
+        "Broad uptime is stable",
+        "Recent incident history suggests corridor-level brittleness can still create support spillover"
+      ],
+      "operator_action": "Review the most brittle partner-corridor combination separately from platform-wide uptime."
+    }
+  ]
+}

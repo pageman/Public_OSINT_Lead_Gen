@@ -1,5 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
+import { readRepoJson } from "./read-json";
 
 type FintechSignal = {
   id: string;
@@ -34,12 +33,6 @@ type FintechDataContract = {
   updates: FintechUpdate[];
 };
 
-function fintechDataPath() {
-  return path.join(process.cwd(), "..", "..", "data", "fintech", "signals.latest.json");
-}
-
 export function readFintechData(): FintechDataContract {
-  const filePath = fintechDataPath();
-  const raw = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(raw) as FintechDataContract;
+  return readRepoJson<FintechDataContract>("data/fintech/signals.latest.json");
 }

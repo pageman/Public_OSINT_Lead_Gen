@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "questions": [
+    "What signal would be useful enough to integrate?",
+    "How often would you need it refreshed?",
+    "Would you consume JSON, CSV, or briefing output?",
+    "What workflow would the signal change inside your operation?",
+    "What would make this worth paying for?"
+  ],
+  "responses": [
+    {
+      "company": "Example Partner",
+      "need": "JSON feed of corridor and policy-risk observations",
+      "cadence": "daily",
+      "workflow": "prioritization of manual review"
+    }
+  ]
+}

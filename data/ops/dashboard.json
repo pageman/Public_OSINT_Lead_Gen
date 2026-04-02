@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "metrics": [
+    {
+      "id": "queue-aging",
+      "label": "Queue aging",
+      "value": "4.2 days",
+      "trend": "down",
+      "note": "Target is under 3 days for the pilot queue"
+    },
+    {
+      "id": "manual-touches",
+      "label": "Manual touches per case",
+      "value": "3.1",
+      "trend": "down",
+      "note": "Reduction from 4.0 is the near-term operational win"
+    },
+    {
+      "id": "rework-rate",
+      "label": "Retry or rework rate",
+      "value": "18%",
+      "trend": "flat",
+      "note": "Still too high for a healthy queue"
+    },
+    {
+      "id": "briefings",
+      "label": "Briefings booked",
+      "value": "2",
+      "trend": "up",
+      "note": "Track movement from signal to conversation"
+    }
+  ]
+}

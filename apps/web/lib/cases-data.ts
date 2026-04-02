@@ -1,5 +1,4 @@
-import fs from "node:fs";
-import path from "node:path";
+import { readRepoJson } from "./read-json";
 
 type OpsCase = {
   id: string;
@@ -16,11 +15,6 @@ type CasesContract = {
   cases: OpsCase[];
 };
 
-function casesPath() {
-  return path.join(process.cwd(), "..", "..", "data", "ops", "cases.json");
-}
-
 export function readCasesData(): CasesContract {
-  const raw = fs.readFileSync(casesPath(), "utf8");
-  return JSON.parse(raw) as CasesContract;
+  return readRepoJson<CasesContract>("data/ops/cases.json");
 }

@@ -1,0 +1,33 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "tiers": [
+    {
+      "name": "Free Signal",
+      "price": "$0",
+      "includes": [
+        "Public fintech pulse",
+        "Core signal summary",
+        "Source-linked updates"
+      ]
+    },
+    {
+      "name": "Gated Insights",
+      "price": "Lead capture",
+      "includes": [
+        "Historical export",
+        "7-day nowcast",
+        "Operator briefing deck"
+      ]
+    },
+    {
+      "name": "Pilot Sprint",
+      "price": "Custom scoped",
+      "includes": [
+        "30-day workflow sprint",
+        "Queue triage",
+        "Escalation mapping",
+        "Manual-review prioritization"
+      ]
+    }
+  ]
+}

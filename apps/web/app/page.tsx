@@ -59,7 +59,7 @@ export default function HomePage() {
       </section>
 
       <section className="section">
-        <h2>Day 0-30 Build Surfaces</h2>
+        <h2>System Surfaces</h2>
         <div className="route-grid">
           {leadRoutes.map((route) => (
             <article className="card" key={route.label}>
@@ -72,6 +72,51 @@ export default function HomePage() {
               </p>
             </article>
           ))}
+          <article className="card">
+            <h3>Nowcast</h3>
+            <p className="muted">Live day 31-60 forward-looking signal.</p>
+            <p>
+              <a className="button-secondary" href="/qualification/nowcast">
+                Open
+              </a>
+            </p>
+          </article>
+          <article className="card">
+            <h3>Community signals</h3>
+            <p className="muted">Submission and moderation loop for externally sourced signals.</p>
+            <p>
+              <a className="button-secondary" href="/qualification/community-signals">
+                Open
+              </a>
+            </p>
+          </article>
+          <article className="card">
+            <h3>Dashboard</h3>
+            <p className="muted">Pilot KPI dashboard for the 61-90 delivery layer.</p>
+            <p>
+              <a className="button-secondary" href="/ops/dashboard">
+                Open
+              </a>
+            </p>
+          </article>
+          <article className="card">
+            <h3>Pricing</h3>
+            <p className="muted">Live pricing architecture route for free, gated, and paid layers.</p>
+            <p>
+              <a className="button-secondary" href="/pricing">
+                Open
+              </a>
+            </p>
+          </article>
+          <article className="card">
+            <h3>Partner discovery</h3>
+            <p className="muted">91-120 beta partner requirement capture flow.</p>
+            <p>
+              <a className="button-secondary" href="/partners/beta">
+                Open
+              </a>
+            </p>
+          </article>
         </div>
       </section>
 

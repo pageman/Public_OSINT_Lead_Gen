@@ -48,6 +48,8 @@ services/ingestion/data/fintech/
 services/ingestion/data/latest_snapshot.json
 data/lead-capture/submissions.ndjson
 data/ops/pilot-intake.ndjson
+data/qualification/community-submissions.ndjson
+data/ops/partner-discovery.ndjson
 
 # Local large media kept out of Git history
 Give_away_OSINT_to_sell_execution.m4a

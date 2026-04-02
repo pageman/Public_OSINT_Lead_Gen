@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "items": [
+    {
+      "id": "community-001",
+      "status": "corroborated",
+      "source_type": "operator_submission",
+      "signal": "Retry pressure rising on one partner-corridor combination",
+      "context": "Cross-border payouts",
+      "action": "Review escalation path and retry handling before customer-visible support volume rises."
+    },
+    {
+      "id": "community-002",
+      "status": "needs_evidence",
+      "source_type": "anonymous_submission",
+      "signal": "Manual review queue expanding after policy-change burst",
+      "context": "Compliance operations",
+      "action": "Hold until confirmed by higher-confidence source."
+    }
+  ]
+}
