@@ -6,6 +6,32 @@ An implementation repo for an OSINT-led lead generation platform that starts wit
 
 This repository is organized around a 120-day build plan. The first 30 days focus on a narrow wedge: one crisis, one buyer persona, one public intelligence hub, one repeatable publishing workflow, and one conversion path.
 
+## Research Arc
+
+This repo is built around one claim:
+
+Public operational signal can become the top of a lead-generation engine if it is clear enough to orient buyers and specific enough to expose the workflow pain they will pay to fix.
+
+The repo follows a strict sequence:
+
+1. `Public signal`: turn noisy public inputs into a usable operational read.
+2. `Qualification`: gate sharper assets to identify who has real workflow pain.
+3. `Execution`: convert the highest-friction problems into narrow paid pilots.
+4. `Standardization`: turn repeated wins into routes, contracts, SOPs, and internal APIs.
+
+The commercial logic is simple:
+
+- do not monetize raw visibility first
+- give away the signal
+- charge for executing on the queue, corridor, compliance, reconciliation, or exception burden the signal reveals
+
+That is why this repo is not just content, not just a dashboard, and not just a codebase. It is a staged operating model for moving from research to trust to demand to paid workflow execution.
+
+Read the full narrative and method here:
+
+- [Research Arc](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc.md)
+- [Research Arc Diagram](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc-diagram.md)
+
 ## Scope
 
 This repo is intended to hold:
