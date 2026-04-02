@@ -110,6 +110,9 @@ The repo now includes a working day 0-30 foundation:
 - [apps/web/app/fintech/page.tsx](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/fintech/page.tsx) exposes the fintech alpha wedge in the app
 - [docs/fintech-alpha](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/fintech-alpha) contains the fintech day 0-30 content set
 - [data/fintech/signals.latest.json](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/data/fintech/signals.latest.json) is the stable persisted fintech signal contract consumed by the app
+- [pilot-intake](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/pilot-intake/page.tsx) is the minimum viable paid-pilot intake path
+- [ops/cases](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/apps/web/app/ops/cases/page.tsx) is the minimum viable internal case queue
+- [refresh-fintech-signals.yml](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/.github/workflows/refresh-fintech-signals.yml) schedules weekly fintech contract refreshes
 
 ## Local Start
 

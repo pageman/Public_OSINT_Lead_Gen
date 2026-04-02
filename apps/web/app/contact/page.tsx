@@ -22,6 +22,15 @@ export default function ContactPage() {
             </p>
           </article>
         ))}
+        <article className="card">
+          <h3>Pilot intake</h3>
+          <p className="muted">Use this when the public signal has already exposed a real workflow bottleneck.</p>
+          <p>
+            <a className="button" href="/pilot-intake">
+              Open pilot intake
+            </a>
+          </p>
+        </article>
       </div>
     </section>
   );

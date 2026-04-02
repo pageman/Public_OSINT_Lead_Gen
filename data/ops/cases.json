@@ -1,0 +1,23 @@
+{
+  "generated_at": "2026-04-03T00:00:00Z",
+  "cases": [
+    {
+      "id": "case-001",
+      "company": "Example Payments",
+      "status": "triage",
+      "priority": "high",
+      "wedge": "fintech",
+      "pain": "Compliance review backlog in corridor payouts",
+      "next_step": "Map queue aging and define temporary prioritization rules"
+    },
+    {
+      "id": "case-002",
+      "company": "Sample Remittance Co",
+      "status": "briefing_booked",
+      "priority": "medium",
+      "wedge": "fintech",
+      "pain": "Partner-specific payout degradation and reconciliation retries",
+      "next_step": "Prepare corridor-level escalation matrix"
+    }
+  ]
+}
