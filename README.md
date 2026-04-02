@@ -2,7 +2,7 @@
 
 An implementation repo for an OSINT-led lead generation platform that starts with public signal, converts that signal into qualified inbound demand, and monetizes the execution workflows behind the signal.
 
-<img src="./Strategic%20OSINT%20Business%20Development%20Roadmap.png" alt="OSINT Lead Gen roadmap" width="900" />
+![OSINT Lead Gen roadmap](./Strategic%20OSINT%20Business%20Development%20Roadmap.png)
 
 This repository is organized around a 120-day build plan. The first 30 days focus on a narrow wedge: one crisis, one buyer persona, one public intelligence hub, one repeatable publishing workflow, and one conversion path.
 
