@@ -31,6 +31,7 @@ Read the full narrative and method here:
 
 - [Research Arc](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc.md)
 - [Research Arc Diagram](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/research-arc-diagram.md)
+- [How To Use This Repo](/Users/hifi/Downloads/Public_OSINT_Lead_Gen/docs/how-to-use-this-repo.md)
 
 ## Important: Example Outputs vs Live Alpha
 
